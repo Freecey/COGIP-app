@@ -20,7 +20,7 @@ class CompanyController
                 $invoices = $companies->getInvoices($url[1]);
                 $view =   $_SERVER['DOCUMENT_ROOT'] . '/View/detailCompany.php';
             } else {
-                $view = '/View/error404.php';
+                $view = $_SERVER['DOCUMENT_ROOT'] . '/View/error404.php';
             }
         }
 

@@ -17,9 +17,9 @@ class InvoiceController
         if (isset($url[1])) {
             if (ctype_digit($url[1])) {
                 $detailInvoice = $invoices->getDetails($url[1]);
-                $view = './View/detailInvoice.php';
+                $view =  $_SERVER['DOCUMENT_ROOT'] . '/View/detailInvoice.php';
             } else {
-                $view = './View/error404.php';
+                $view = $_SERVER['DOCUMENT_ROOT'] . '/View/error404.php';
             }
         }
 
