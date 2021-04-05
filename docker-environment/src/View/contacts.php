@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -46,7 +46,7 @@
                     </tr>
                     <tr>
                         <td class="pl-2"><?php foreach ($contacts->getContact() as $key => $contact) { ?>
-                                <p><a href="/index.php?page=contacts&id=<?= $contact['Id'] ?>"><?= $contact['FirstName'] . ' ' . $contact['LastName'] ?></a></p><?php } ?>
+                                <p><a href="/contacts/<?= $contact['Id'] ?>"><?= $contact['FirstName'] . ' ' . $contact['LastName'] ?></a></p><?php } ?>
                         <td class="pl-2"><?php foreach ($contacts->getContact() as $key => $contact) { ?>
                                 <p><?php echo $contact['Email'] ?></p><?php } ?>
                         </td>
