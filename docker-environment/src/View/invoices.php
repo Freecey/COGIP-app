@@ -19,30 +19,11 @@
 <body id="page-top">
 
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="https://i.ibb.co/7Rh7NNg/24b99a4eedf226ba.png" alt="cogip" border="0" /></a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ml-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto">
-                <li class="nav-item"><a class="nav-link" href="homepage.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="invoices.php">Invoices</a></li>
-                <li class="nav-item"><a class="nav-link" href="companies.php">Companies</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.php">Contacts</a></li>
-                <li class="nav-item"><a class="nav-link" href="clients.php">Clients</a></li>
-                <li class="nav-item"><a class="nav-link" href="providers.php">Providers</a></li>
-                <li class="nav-item"><a class="nav-link" href="login.php">Connexion</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/View/includes/nav.php'); ?>
 <!-- Masthead-->
 <header class="masthead invoices">
     <div class="container">
-        <div class="masthead-heading text-uppercase"Companies Directory</div>
+        <div class="masthead-heading text-uppercase">Invoices Directory</div>
     <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#invoices">Tell Me More</a>
     </div>
 </header>
@@ -63,7 +44,7 @@
                 </tr>
                 <tr>
                     <td class="pl-2"><?php foreach ($invoices->getInvoice() as $key => $invoice) { ?>
-                            <p><a href="/index.php?page=invoices&id=<?=$invoice['InvoiceNumber']?>"><?= $invoice['InvoiceNumber']?></a></p><?php } ?>
+                            <p><a href="/invoices/<?=$invoice['InvoiceNumber']?>"><?= $invoice['InvoiceNumber']?></a></p><?php } ?>
                     <td class="pl-2"><?php foreach ($invoices->getInvoice() as $key => $invoice) { ?>
                             <p><?php echo $invoice['InvoiceDate']?></p><?php } ?></td>
                     <td class="pl-2"><?php foreach ($invoices->getInvoice() as $key => $invoice) { ?>
@@ -75,23 +56,7 @@
         </div>
     </div>
 </section>
-<!-- Footer-->
-<footer class="footer py-4">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4 text-lg-left">Copyright © COGIP <?php echo date('Y')?></div>
-            <div class="col-lg-4 my-3 my-lg-0">
-                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <div class="col-lg-4 text-lg-right">
-                <a class="mr-3" href="#!">Privacy Policy</a>
-                <a href="#!">Terms of Use</a>
-            </div>
-        </div>
-    </div>
-</footer>
+
 <!-- Bootstrap core JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -104,5 +69,5 @@
 <script src="js/scripts.js"></script>
 </body>
 </html>
-
+<?php require 'includes/footer.php' ?>
 
