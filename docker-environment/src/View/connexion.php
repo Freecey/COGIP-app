@@ -18,8 +18,15 @@
 </head>
 <body id="page-top">
 <!-- Navigation-->
+<<<<<<< HEAD
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/View/includes/nav.php'); ?> <!--import du code nav dans ma page $_SERVER['DOCUMENT_ROOT= pour le savoir var_dum $_SERVER[document root]'] permet de prendre le chemin complet(les dossier de l'emplacement de la racine du serveur- )--> 
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+=======
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+>>>>>>> 7b749d18c5710f336e9993f1885ef6e0e0372bf3
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="https://i.ibb.co/7Rh7NNg/24b99a4eedf226ba.png" alt="cogip" border="0" /></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,11 +39,11 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#portfolio">Invoices</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#about">Companies</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#contact">Contacts</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Connexion</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/login">Connexion</a></li>
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
 <!-- Masthead-->
 <header class="masthead login">
     <div class="container">
@@ -50,7 +57,7 @@
         <div class="text-center">
             <h3 class="section-subheading text-muted">Bienvenue dans l'espace de connexion de la COGIP</h3>
         </div>
-        <form action="index.php?page=admin" id="contactForm" name="sentMessage" novalidate="novalidate" method="POST">
+        <form action="/login" id="contactForm" name="sentMessage" novalidate="novalidate" method="POST">
             <div class="row align-items-stretch mb-5">
                 <div class="col-md-6">
                     <div class="form-group">
